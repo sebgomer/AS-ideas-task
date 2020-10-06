@@ -15,8 +15,9 @@ body {
 }
 
 #app {
-    margin-left: 5rem;
-    padding: 1rem; 
+    margin-left: 8rem;
+    padding: 1rem;
+    max-width: 70%;
 }
 
 body::-webkit-scrollbar {
@@ -66,7 +67,6 @@ body::-webkit-scrollbar-thumb {
     transition: transform var(--transition-speed); 
 }
 
-
 .nav-item {
     width: 100%;
 }
@@ -105,30 +105,7 @@ body::-webkit-scrollbar-thumb {
 .navbar:hover .logo-item svg {
     transform: rotate(-180deg); 
 }
-/* .nav {
-    text-align: center;
-    margin: 20px 0 20px 0;  
+
+#homeContainer p {
+    line-height: 2rem;
 }
-
-.nav__link {
-    text-decoration: none;
-    color: #eeeeee;
-    padding: 0px 50px 0px 50px ;
-}
-
-#app {
-    margin: 0 200px 0 200px;
-
-}
-
-.table {
-    border-collapse: collapse; 
-    margin: 25px 0; 
-    font-size: 0.9em;
-    min-width: 400px;
-}
-
-.table thead tr {
-    background-color: green;
-    text-align: left;
-} */

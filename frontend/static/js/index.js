@@ -4,13 +4,13 @@ import Stars from "./views/Stars.js";
 import Imprint from "./views/Imprint.js";
 import errorPage from "./views/errorPage.js";
 import { fetchUniverse } from "./data/universeCall.js";
-import { fetchStar } from "./data/starCall.js";
+// import { fetchStar } from "./data/starCall.js";
 
 fetchUniverse();
-fetchStar(); 
+// fetchStar(); 
 
 const navigateTo = url => {
-    history.pushState(null, null, url); 
+    history.pushState(null, null, url);
     router();
 }
 
@@ -54,24 +54,14 @@ window.addEventListener("popstate", router);
 document.addEventListener("DOMContentLoaded", () => {
     // no page refresh
     document.body.addEventListener("click", e => {
-        if (e.target.matches("[data-link")) {
-            e.preventDefault(); 
+        if (e.target.matches("[data-link]")) {
+            e.preventDefault();  
             navigateTo(e.target.href); 
-        } 
-        
-        // else {
-        //     navigateTo(e.target.href); 
-        // }
-        
-        // if (e.target.matches("[universeCall")) {
-        //     fetchUniverse(); 
-        //     navigateTo(e.target.href); 
-        // }  
-        
-        // if (e.target.matches("[starCall")) {
-        //     fetchStar(); 
-        //     navigateTo(e.target.href); 
-        // }
+        }
+
+        if (e.target.matches("[universeCall]")) {
+            navigateTo(e.target.href);
+        }
     })
 
     router(); 
