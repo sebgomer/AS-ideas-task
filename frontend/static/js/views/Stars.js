@@ -9,7 +9,7 @@ export default class extends AbstractView {
     // grab server-side data
     async getHtml() {
         return `
-        <h1>Have a look at our current stars!</h1>
+        <h1>Our currently logged stars</h1>
         <table class="table">
             <tr>
                 <th>Name<th>

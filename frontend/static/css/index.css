@@ -1,13 +1,124 @@
-* {
+:root {
     font-family: 'Exo 2', sans-serif;
-    color: whitesmoke;
-    background-color: black;
-    text-align: center;
+    --text-first: #b6b6b6;
+    --text-second: #ececec; 
+    --bg-first: #292929;
+    --bg-second: #141418;
+    --transition-speed: 500ms; 
 }
 
-.nav {
+body {
+    color: white; 
+    background: black;
+    margin: 0; 
+    padding: 0; 
+}
+
+#app {
+    margin-left: 5rem;
+    padding: 1rem; 
+}
+
+body::-webkit-scrollbar {
+    width: 0.25rem; 
+}
+
+body::-webkit-scrollbar-track {
+    background: black; 
+}
+
+body::-webkit-scrollbar-thumb {
+    background: white; 
+}
+
+.navbar {
+    width: 5rem;
+    height: 100vh; 
+    position: fixed; 
+    background-color: var(--bg-first); 
+    transition: width 200ms ease;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    height: 100%; 
+}
+
+.logo-item {
+    font-size: 1.1rem;
+    font-weight: bold; 
+    text-transform: uppercase; 
+    margin-bottom: 1rem; 
     text-align: center;
-    
+    color: var(--text-first);
+    background: var(--bg-second);
+    letter-spacing: 0.4ch;
+    width: 100%;
+}
+
+.logo-item svg {
+    transform: rotate(0deg);
+    transition: transform var(--transition-speed); 
+}
+
+
+.nav-item {
+    width: 100%;
+}
+
+.nav-item:last-child {
+    margin-top: auto;
+}
+
+.nav__link {
+    display: flex; 
+    align-items: center; 
+    height: 5rem;
+    color: var(--text-first); 
+    text-decoration: none;
+}
+
+.link__text {
+    display: none; 
+    margin-left: 1rem; 
+}
+
+.nav__link svg {
+    min-width: 2rem;
+    margin: 0 1.5rem; 
+    min-width: 2rem; 
+}
+
+.navbar:hover {
+    width: 16rem; 
+}
+
+.navbar:hover .link__text {
+    display: block; 
+}
+
+.navbar:hover .logo-item svg {
+    transform: rotate(-180deg); 
+}
+/* .nav {
+    text-align: center;
+    margin: 20px 0 20px 0;  
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #eeeeee;
+    padding: 0px 50px 0px 50px ;
+}
+
+#app {
+    margin: 0 200px 0 200px;
+
 }
 
 .table {
@@ -20,4 +131,4 @@
 .table thead tr {
     background-color: green;
     text-align: left;
-}
+} */

@@ -57,13 +57,21 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.target.matches("[data-link")) {
             e.preventDefault(); 
             navigateTo(e.target.href); 
-        } if (e.target.matches("[universeCall")) {
-            fetchUniverse(); 
-            navigateTo(e.target.href); 
-        }  if (e.target.matches("[starCall")) {
-            fetchStar(); 
-            navigateTo(e.target.href); 
-        }
+        } 
+        
+        // else {
+        //     navigateTo(e.target.href); 
+        // }
+        
+        // if (e.target.matches("[universeCall")) {
+        //     fetchUniverse(); 
+        //     navigateTo(e.target.href); 
+        // }  
+        
+        // if (e.target.matches("[starCall")) {
+        //     fetchStar(); 
+        //     navigateTo(e.target.href); 
+        // }
     })
 
     router(); 
