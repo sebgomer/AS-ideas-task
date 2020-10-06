@@ -9,7 +9,8 @@ export default class extends AbstractView {
     // grab server-side data
     async getHtml() {
         return `
-        <h1>Welcome to the boring stuff</h1>
+        <h1>More Information</h1>
+        <p>This is where the details of our space mission are presented.<p>
         `;
     }
 }

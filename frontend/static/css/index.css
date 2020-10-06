@@ -1,0 +1,23 @@
+* {
+    font-family: 'Exo 2', sans-serif;
+    color: whitesmoke;
+    background-color: black;
+    text-align: center;
+}
+
+.nav {
+    text-align: center;
+    
+}
+
+.table {
+    border-collapse: collapse; 
+    margin: 25px 0; 
+    font-size: 0.9em;
+    min-width: 400px;
+}
+
+.table thead tr {
+    background-color: green;
+    text-align: left;
+}

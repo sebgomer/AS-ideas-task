@@ -2,7 +2,12 @@ import Home from "./views/Home.js";
 import Universes from "./views/Universes.js"; 
 import Stars from "./views/Stars.js";
 import Imprint from "./views/Imprint.js";
+import errorPage from "./views/errorPage.js";
+import { fetchUniverse } from "./data/universeCall.js";
+import { fetchStar } from "./data/starCall.js";
 
+fetchUniverse();
+fetchStar(); 
 
 const navigateTo = url => {
     history.pushState(null, null, url); 
@@ -14,7 +19,8 @@ const router = async () => {
         { path: "/", view: Home },
         { path: "/universes", view: Universes},
         { path: "/stars", view: Stars },
-        { path: "/stars", view: Imprint },
+        { path: "/imprint", view: Imprint },
+        { path: "/lostInSpace", view: errorPage }
     ];
 
     const potentialRoutes = routes.map(route => {
@@ -29,7 +35,7 @@ const router = async () => {
     // could define own 404 here 
     if(!match) {
         match = {
-            route: routes[0],
+            route: routes[4],
             isRoute: true
         }
     }
@@ -50,6 +56,12 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.addEventListener("click", e => {
         if (e.target.matches("[data-link")) {
             e.preventDefault(); 
+            navigateTo(e.target.href); 
+        } if (e.target.matches("[universeCall")) {
+            fetchUniverse(); 
+            navigateTo(e.target.href); 
+        }  if (e.target.matches("[starCall")) {
+            fetchStar(); 
             navigateTo(e.target.href); 
         }
     })
