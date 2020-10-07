@@ -4,15 +4,15 @@
  
  ## Comments on the workflow
  
- | Task | Description | Comment |
-| ------ | ------ | ------ | 
-| 1 | Showing a static HTML page | No Problems, as expected :)
-| 2 | Add a Menu & Single-Page-Site | SPA were new for me, research granted valuable architecture insides
-| 3 | Loading Data from a REST-Service | fetch refresher, realized that I used too much tutorial boilerplate before, so this was a nice training session
-| 4 | JavaScript Tool Chain | Preprocessing using SASS, new technology but I appreciate the possibilities a lot! + Minified a CSS file as test
-| 5 | Create Unit-Tests for your JS | Tinkering around with jest, learning the concept but focused on frontend / design due to time limitation. Probably the wrong approach during production. :) 
-| 6 | CRUD for universes | Started a for element for the universe call, could not debug a matching response in time (400 error code)
-| 7 | Pagination | Looked at the concept, applied browser history.pushState. Probably not what the question asked tho! :D
+ | Task | Comment |
+| ------ ------ | 
+| 1 | No Problems, as expected :)
+| 2 | SPA were new for me, research granted valuable architecture insides
+| 3 | fetch refresher, realized that I used too much tutorial boilerplate before, so this was a nice training session
+| 4 | Preprocessing using SASS, new technology but I appreciate the possibilities a lot! + Minified a CSS file as test
+| 5 | Tinkering around with jest, learning the concept but focused on frontend / design due to time limitation. Probably the wrong approach during production. :) 
+| 6 | Started a for element for the universe call, could not debug a matching response in time (400 error code)
+| 7 | Looked at the concept, applied browser history.pushState. Probably not what the question asked tho! :D
 
 
 ## Encountered Problems
