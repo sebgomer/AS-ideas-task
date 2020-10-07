@@ -6,15 +6,18 @@ export default class extends AbstractView {
         this.setTitle("Stars")
     }
 
-    // grab server-side data
+    // Grab server-side data
     async getHtml() {
         return `
         <h1>Our currently logged stars</h1>
-        <table class="table">
-            <tr>
-                <th>Name<th>
-                <th>Color<th>
-            </tr>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID<th>
+                    <th>Name<th>
+                    <th>Color<th>
+                </tr>
+            </thead>
             <tbody id="starTable">
             </tbody>
         </table>

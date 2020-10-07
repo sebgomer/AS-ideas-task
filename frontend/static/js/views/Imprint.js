@@ -6,7 +6,7 @@ export default class extends AbstractView {
         this.setTitle("Imprint")
     }
 
-    // grab server-side data
+    // Grab server-side data
     async getHtml() {
         return `
         <h1>More Information</h1>

@@ -4,10 +4,13 @@ import Stars from "./views/Stars.js";
 import Imprint from "./views/Imprint.js";
 import errorPage from "./views/errorPage.js";
 import { fetchUniverse } from "./data/universeCall.js";
-// import { fetchStar } from "./data/starCall.js";
+import { fetchStar } from "./data/starCall.js";
+// import { universePost } from "./data/universePost";
+
 
 fetchUniverse();
-// fetchStar(); 
+fetchStar();
+// universePost(); 
 
 const navigateTo = url => {
     history.pushState(null, null, url);
@@ -23,6 +26,7 @@ const router = async () => {
         { path: "/lostInSpace", view: errorPage }
     ];
 
+    // Check if route path exists
     const potentialRoutes = routes.map(route => {
         return {
             route: route, 
@@ -32,7 +36,7 @@ const router = async () => {
 
     let match = potentialRoutes.find(potentialRoute => potentialRoute.isRoute);
 
-    // could define own 404 here 
+    // Own 404 route
     if(!match) {
         match = {
             route: routes[4],
@@ -46,13 +50,13 @@ const router = async () => {
 
 };
 
-// listen to browser history
+// Listen to browser history -> enable backwards navigation
 window.addEventListener("popstate", router); 
 
-// when all DOM ist loaded, run this method 
-// calling Router 
+// When all DOM ist loaded, run this method 
+// Calling Router otherwise
 document.addEventListener("DOMContentLoaded", () => {
-    // no page refresh
+    // No page refresh
     document.body.addEventListener("click", e => {
         if (e.target.matches("[data-link]")) {
             e.preventDefault();  
@@ -66,3 +70,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
     router(); 
 })
+
+// Trying POST request through <form> element
+
+// router.onload = () => {
+//     const universeForm = document.getElementById('universeForm');
+
+//     universeForm.addEventListener('submit', e => {
+//         e.preventDefault();
+
+//         const formData = new FormData(this);
+//         const searchParams = new URLSearchParams();
+
+//         for (const pair of formData) {
+//             searchParams.append(pair[0], pair[1], pair[2]);
+//         }
+
+//         fetch('https://happy-stars.herokuapp.com/api/universe', {
+//             method: 'POST',
+//             headers: {
+//                 'Content-Type': 'application/json'
+//             },
+//             body: searchParams
+//         })
+//             .then(response => {
+//                 return response.text();
+//             })
+//             .then(text => {
+//                 console.log(text);
+//             })
+//             .catch(err => {
+//                 console.log(err);
+//             })
+//     })
+// }

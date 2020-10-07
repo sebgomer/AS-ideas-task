@@ -4,16 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon server.js", 
     "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
-    "nodemon": "^2.0.4"
+    "express": "^4.17.1"
   },
   "devDependencies": {
-    "jest": "^26.5.0"
+    "jest": "^26.5.0",
+    "nodemon": "^2.0.4"
   }
 }

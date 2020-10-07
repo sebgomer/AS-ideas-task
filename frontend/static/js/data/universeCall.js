@@ -12,15 +12,19 @@ const fetchUniverse = () => {
     .then(data => {
         const html = data.universes
             .map(universe => {
+                // Map table values for Universes.js
                 return `
                 <tr>
+                    <td>${universe.id}</td>
+                    <td></td>
                     <td>${universe.name}</td>
+                    <td></td>
                     <td>${universe.maxSize}</td>
                 </tr>`
             })
             .join("");
-            console.log(html); 
-            document.querySelector("#universeTable > tbody").insertAdjacentHTML("beforeend", html);
+            // Add cleaned html to <table> element in Universes.js
+            document.querySelector("#universeTable").insertAdjacentHTML("beforeend", html);
     })
     .catch(err => {
         console.log(err); 

@@ -1,3 +1,4 @@
+// Abstract view boilerplate
 export default class {
     constructor() {
 
@@ -7,6 +8,7 @@ export default class {
         document.title = title; 
     }
 
+    // Serve index.js
     async getHtml() {
         return ""; 
     }

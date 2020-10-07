@@ -6,7 +6,7 @@ export default class extends AbstractView {
         this.setTitle("Home");
     }
 
-    // grab server-side data
+    // Grab server-side data
     async getHtml() {
         return `
         <h1>Oh no!</h1>

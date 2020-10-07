@@ -12,13 +12,18 @@ const fetchStar = () => {
     .then(data => {
         const html = data.stars
             .map(star => {
+                // Map table values for Stars.js
                 return `
                 <tr>
+                    <td>${star.id}</td>
+                    <td></td>
                     <td>${star.name}</td>
+                    <td></td>
                     <td>${star.color}</td>
                 </tr>`
             })
             .join("");
+            // Add cleaned html to <table> element in Stars.js
             document.querySelector('#starTable').insertAdjacentHTML("afterbegin", html);
     })
     .catch(err => {
