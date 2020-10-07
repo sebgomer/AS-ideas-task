@@ -1,6 +1,6 @@
 # AS Ideas Recruitment
 
- Recruitment task done by me for a junior oriented position @IdeasEngineering. 
+ Recruitment task done by me for a junior oriented position @Ideas Engineering. 
  
  ## Comments on the workflow
  
