@@ -4,8 +4,8 @@
  
  ## Comments on the workflow
  
- | Task | Comment |
-| ------ ------ | 
+| Task | Comment |
+| ------ | ------ | 
 | 1 | No Problems, as expected :)
 | 2 | SPA were new for me, research granted valuable architecture insides
 | 3 | fetch refresher, realized that I used too much tutorial boilerplate before, so this was a nice training session
