@@ -6,6 +6,8 @@ $thirdBg: #1a1a1f;
 $transitionspeed: 500ms;
 $font-stack: 'Exo 2', sans-serif;
 $font-size: 18px;
+$symbolColor: #fdcc0d;
+$lineheight: 2.5rem; 
 
 :root {
     font-size: $font-size;
@@ -86,21 +88,67 @@ body {
 	height: 5rem;
 	color: $primaryText;
 	text-decoration: none;
+	filter: grayscale(100%) opacity(0.6);
+	transition: $transitionspeed;
+	&:hover {
+		background-color: $thirdBg; 
+		filter: grayscale(0%) opacity(1);
+	}
 	svg {
 		min-width: 2rem;
 		margin: 0 1.5rem;
 		min-width: 2rem;
 	}
 }
+#universeActive {
+	filter: grayscale(0%) opacity(1);
+}
 .link__text {
 	display: none;
 	margin-left: 1rem;
 }
-#homeContainer {
+.fa-primary, .fa-secondary {
+	color: $symbolColor;
+	transition: $transitionspeed;
+}
+#staticContainer {
 	p {
-		line-height: 2rem;
+		line-height: $lineheight;
 	}
 }
 table {
-    background-color: $secondaryBg;
+	border-collapse: collapse;
+	border-radius: 5px 5px 5px 5px;
+	overflow: hidden; 
+	box-shadow: 0 0 30px 0 rgba($color: $primaryText, $alpha: 0.4);
+	background-color: $secondaryBg;
+	margin: 50px 0; 
+	font-size: 1.2em; 
+	min-width: 500px;
+	thead {
+		background-color: $primaryText; 
+		color: $primaryBg;
+		text-align: left;
+		font-weight: bold;
+	}
+	td, th {
+		padding: 16px 12px; 
+	}
+}
+
+.errorWrapper {
+	display: flex; 
+	flex-direction: column;
+	height: 30rem;
+	align-items: center;
+	justify-content: space-around;
+	img {
+		margin: 40px 0; 
+	}
+	a {
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 20px; 
+		color: $symbolColor;
+	}
 }

@@ -9,11 +9,13 @@ export default class extends AbstractView {
     // Grab server-side data
     async getHtml() {
         return `
-        <h1>Oh no!</h1>
-        <h2>You have ventured too far out of space.<h2>
-            <p>
-                <a href="/" data-link>Click here to get back to the space observatory.</a>
-            </p>
+        <div class="errorWrapper">
+            <h1>Oh no!</h1>
+                <h2>You have ventured too far out of space.</h2>
+                <img src="/static/img/astronaut.gif"></img>
+                    <a href="/" data-link>Click here to get back home</a>
+        </div>
         `;
     }
 }
+

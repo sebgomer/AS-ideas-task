@@ -1,4 +1,6 @@
+import { fetchUniverse } from "./universeCall.js";
 
-test('Check for boolean value', () => {
-    expect(1).toEqual(1);
-})
+it('returns the title of the first album', async () => {
+    const name = await fetchUniverse();  // Run the function
+    expect(name).toEqual('Cigar');  // Expect the result
+  });
