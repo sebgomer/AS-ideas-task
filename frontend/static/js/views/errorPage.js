@@ -9,7 +9,6 @@ export default class extends AbstractView {
     // Grab server-side data
     async getHtml() {
         return `
-
         <div class="errorWrapper">
             <h1>Oh no!</h1>
                 <h2>You have ventured too far out of space.</h2>
